@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@500&display=swap');
+
+* {
+    font-family: 'Sometype Mono', monospace;
+}
+
+body {
+    margin: 0; 
+    background-image: url(background.png);
+    background-size: cover;
+}
+
+header {
+    background-color: #fb7e14;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 15px;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+#desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px; /* Set the maximum width for the text */
+    margin: 0 auto; /* Center the element horizontally */
+    text-align: center;
+}
+
+
+#info {
+    color: white;
+}
