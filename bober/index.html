@@ -7,6 +7,7 @@
     <title>bober</title>
 </head>
 <body class="flex flex-col items-center justify-between min-h-screen bg-gray-900 text-gray-100">
+    <script src="index.js"></script>
     <!-- Top Buttons -->
     <div class="flex justify-center mt-4 fixed top-0 left-0 right-0 p-4 bg-gray-900">
         <div class="flex items-center">
@@ -25,12 +26,12 @@
     <!-- Main Content -->
     <div class="flex flex-col items-center mt-24">
         <!-- Large Number -->
-        <div class="mt-8 text-5xl font-bold">
-            3 989 700
+        <div class="mt-8 text-5xl font-bold" id="score" >
+            0
         </div>
         
         <!-- Circular Image Placeholder -->
-        <div class="mt-8">
+        <div class="mt-8" onclick="addScore()">
             <div class="w-64 h-64 bg-gray-700 rounded-full flex items-center justify-center">
                 <img src="bober.png" alt="">
             </div>
@@ -42,11 +43,8 @@
         <!-- Progress Bar -->
         <div class="mt-4">
             <div class="flex items-center justify-between mb-2">
-                <span>5000/5000</span>
+                <span id="energy">1500/1500</span>
                 <span>boost</span>
-            </div>
-            <div class="w-full bg-gray-700 rounded-full h-4">
-                <div class="bg-blue-500 h-4 rounded-full" style="width: 100%;"></div>
             </div>
         </div>
         
