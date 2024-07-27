@@ -23,7 +23,7 @@ function login() {
     let username = document.getElementById("user").value
     let password = document.getElementById("pw").value
     let status = document.getElementById("status")
-    fetch(`http://127.0.0.1:6464/user/${username}?password=${password}`)
+    fetch(`http://213.111.84.201:6464/user/${username}?password=${password}`)
         .then(response => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -45,7 +45,7 @@ function reg() {
     let username = document.getElementById("user").value
     let password = document.getElementById("pw").value
     let status = document.getElementById("status")
-    fetch('http://127.0.0.1:6464/reg/', {
+    fetch('http://213.111.84.201:6464/reg/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
