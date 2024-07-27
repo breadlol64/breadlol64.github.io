@@ -13,7 +13,7 @@ function addScore() {
     let score_el = document.getElementById("score")
     score_el.innerHTML = Number(score_el.innerText) + 1
     userid = getCookie("userid")
-    fetch(`http://127.0.0.1:6464/setcoins?userid=${userid}&coins=${score_el.value}`)
+    fetch(`http://127.0.0.1:6464/setcoins?userid=${userid}&coins=${score_el.innerText}`)
         .then(response => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
