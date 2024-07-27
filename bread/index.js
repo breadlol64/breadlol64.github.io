@@ -37,7 +37,7 @@ function login() {
             setCookie("userid", data["_id"], 14)
             setCookie("password", password, 14)
         })
-        .catch(error => console.error('There has been a problem with your fetch operation:', error));
+        .catch(error => console.error('There has been a problem with your fetch operation: ', error));
 
 }
 
