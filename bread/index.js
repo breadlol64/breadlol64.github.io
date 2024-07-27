@@ -36,6 +36,7 @@ function login() {
             status.innerText = JSON.stringify(data, null, 4)
             setCookie("username", data["username"], 14)
             setCookie("userid", data["_id"], 14)
+            setCookie("password", password, 14)
         })
         .catch(error => console.error('There has been a problem with your fetch operation:', error));
 
