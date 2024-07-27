@@ -1,7 +1,3 @@
-let username = document.getElementById("user").value
-let password = document.getElementById("pw").value
-let status = document.getElementById("status")
-
 function setCookie(name, value, days) {
     let expires = "";
     if (days) {
@@ -24,7 +20,9 @@ function getCookie(name) {
 }
 
 function login() {
-
+    let username = document.getElementById("user").value
+    let password = document.getElementById("pw").value
+    let status = document.getElementById("status")
     fetch(`http://127.0.0.1:6464/user/${username}?password=${password}`)
         .then(response => {
           if (!response.ok) {
@@ -44,6 +42,9 @@ function login() {
 }
 
 function reg() {
+    let username = document.getElementById("user").value
+    let password = document.getElementById("pw").value
+    let status = document.getElementById("status")
     fetch('http://127.0.0.1:6464/reg/', {
         method: 'POST',
         headers: {
