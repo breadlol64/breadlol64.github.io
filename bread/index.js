@@ -43,5 +43,26 @@ function login() {
 }
 
 function reg() {
+    fetch('http://127.0.0.1:6464/reg/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            "username": "breadlol32",
+            "password": "breadlol32"
+        }) // convert JavaScript object to JSON string
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json(); // parses JSON response into native JavaScript objects
+      })
+      .then(data => {
+        console.log(data)
+        login()
+    })
+      .catch(error => console.error('There has been a problem with your fetch operation:', error));
     
 }
