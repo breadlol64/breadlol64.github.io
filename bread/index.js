@@ -1,3 +1,7 @@
+let username = document.getElementById("user").value
+let password = document.getElementById("pw").value
+let status = document.getElementById("status")
+
 function setCookie(name, value, days) {
     let expires = "";
     if (days) {
@@ -20,9 +24,6 @@ function getCookie(name) {
 }
 
 function login() {
-    let username = document.getElementById("user").value
-    let password = document.getElementById("pw").value
-    let status = document.getElementById("status")
 
     fetch(`http://127.0.0.1:6464/user/${username}?password=${password}`)
         .then(response => {
@@ -49,8 +50,8 @@ function reg() {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            "username": "breadlol32",
-            "password": "breadlol32"
+            "username": username,
+            "password": password
         }) // convert JavaScript object to JSON string
     })
       .then(response => {
