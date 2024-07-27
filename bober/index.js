@@ -3,7 +3,7 @@ const userid = getCookie("userid")
 const username = getCookie("username")
 const password = getCookie("password")
 
-fetch(`http://127.0.0.1:6464/user/${username}?password=${password}`)
+fetch(`http://213.111.84.201:6464/user/${username}?password=${password}`)
         .then(response => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -29,7 +29,7 @@ function getCookie(name) {
 
 function addScore() {
     score_el.innerHTML = Number(score_el.innerText) + 1
-    fetch(`http://127.0.0.1:6464/setcoins?userid=${userid}&coins=${score_el.innerText}`)
+    fetch(`http://213.111.84.201:6464/setcoins?userid=${userid}&coins=${score_el.innerText}`)
         .then(response => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
